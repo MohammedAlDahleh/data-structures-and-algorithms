@@ -12,7 +12,7 @@ const addOne = (arr) => {
   // Solution code here...
   let localarr = [];
   arr.forEach((num, index) => {
-  
+
     localarr.push(arr[index] = num + 1);
   });
   return localarr;
@@ -30,10 +30,10 @@ const addExclamation = (arr) => {
   // Solution code here...
   let loclarr = [];
   arr.forEach((str, index) => {
-  
+
     loclarr.push(arr[index] = str + '!');
   });
-  
+
   return loclarr;
 };
 
@@ -50,12 +50,12 @@ const allUpperCase = (arr) => {
 
   let localarr = [];
 
-arr.forEach((str, index) => {
-  
-  localarr.push(arr[index] = str.toUpperCase());
-});
+  arr.forEach((str, index) => {
 
-return localarr;
+    localarr.push(arr[index] = str.toUpperCase());
+  });
+
+  return localarr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,8 +107,8 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  for (let i=0;i<times;i++) {
-    callback(arr,num);
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
   }
   return arr;
 };
@@ -133,9 +133,9 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-  let localarr=[];
-  availableItems.forEach(str =>{
-    if (str.available){
+  let localarr = [];
+  availableItems.forEach(str => {
+    if (str.available) {
       localarr.push(str.name)
     }
   })
@@ -160,17 +160,17 @@ const fizzbuzz = (arr) => {
   // Solution code here...
   let localarr = [];
   arr.forEach(num => {
-    if (num % 3 === 0) {
-     localarr.push('Fizz');
-   } else if (num % 5 === 0) {
-     localarr.push('Buzz');
-   } else if (num % 3 === 0 && num % 5 === 0) {
-     localarr.push('Fizz Buzz');
-   }  else {
-     localarr.push(num);
-   }
- });
- return localarr
+    if (num % 3 === 0 && num % 5 === 0) {
+      localarr.push('Fizz Buzz');
+    } else if (num % 3 === 0) {
+      localarr.push('Fizz');
+    } else if (num % 5 === 0) {
+      localarr.push('Buzz');
+    } else {
+      localarr.push(num);
+    }
+  });
+  return localarr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -224,7 +224,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
