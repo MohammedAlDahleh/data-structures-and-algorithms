@@ -102,6 +102,7 @@ class LinkedList {
       currentNode = currentNode.next;
     }
   }
+
 }
 
 let linkedList = new LinkedList();
