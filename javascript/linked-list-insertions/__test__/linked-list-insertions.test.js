@@ -103,4 +103,13 @@ describe('Linked List Test', () => {
     linkedList.insertAfter('h', 'c');
     expect(linkedList.ToString()).toBe('m -> o -> h -> c -> ');
   });
+  test('Can successfully insert a node after the last node of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.toInsert('B');
+    linkedList.toInsert('a');
+    linkedList.toInsert('h');
+    linkedList.insertAfter('h', 'c');
+    expect(linkedList.ToString()).toBe('B -> a -> h -> c -> ');
+  });
+ 
 });
