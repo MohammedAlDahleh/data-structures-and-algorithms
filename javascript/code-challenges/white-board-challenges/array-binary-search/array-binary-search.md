@@ -1,1 +1,0 @@
-![array-binary-search.](../array-binary-search/array-binary-search.PNG)
