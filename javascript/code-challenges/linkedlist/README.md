@@ -14,4 +14,11 @@
 6. Will return false when searching for a value in the linked list that does not exist
 7. Can properly return a collection of all the values that exist in the linked list
 
+
+# Big O:
+* Big O for all sections (insert section, include section, string section) 
+Size => O(1)
+Time => O(n)
+
+
 ![all-pass](./Linked-List.PNG)
