@@ -1,8 +1,7 @@
 'use strict';
 
-const BinaryTree = require('../Binary-Tree/binary-tree');
+const { BinaryTree, BinaryTreeSearch } = require('../Binary-Tree/binary-tree');
 const Node = require('../node');
-const BinarySearchTree = require('../Binary-Search-Tree/Binary-Search-Tree');
 
 let tree = null;
 
@@ -37,31 +36,31 @@ describe('Binary Test', () => {
     });
 
     test('preOrder', () => {
-        const preOrder = tree.preOrder();
+        const preOrder = tree.PreOrder();
         expect(preOrder).toEqual([1, 2, 6, 7, 8, 9, 3, 4, 5]);
     });
 
     test('inOrder', () => {
-        const inOrder = tree.inOrder();
+        const inOrder = tree.InOrder();
         expect(inOrder).toEqual([6, 8, 7, 9, 2, 1, 4, 3, 5]);
     });
 
     test('postOrder', () => {
-        const postOrder = tree.postOrder();
+        const postOrder = tree.PostOrder();
         expect(postOrder).toEqual([8, 9, 7, 6, 2, 4, 5, 3, 1]);
     });
 
     test('Binary Search', () => {
-        const BTS = new BinarySearchTree();
-        BTS.Add(10);
-        BTS.Add(11);
+        const BTS = new BinaryTreeSearch();
+        BTS.Add(9);
+        BTS.Add(13);
+        BTS.Add(7);
+        BTS.Add(19);
+        BTS.Add(32);
+        BTS.Add(1);
         BTS.Add(5);
-        BTS.Add(13);
-        BTS.Add(13);
-        BTS.Add(6);
-        BTS.Add(15);
-        expect(BTS.Contains(6)).toBeTruthy();
-        expect(BTS.Contains(15)).toBeTruthy();
+        expect(BTS.Contains(7)).toBeTruthy();
+        expect(BTS.Contains(13)).toBeTruthy();
         expect(BTS.Contains(20)).toBeFalsy();
     });
 
@@ -76,7 +75,7 @@ describe('Binary Test', () => {
     });
 
     test('Can successfully add a left child and right child to a tree', () => {
-        const BTS = new BinarySearchTree();
+        const BTS = new BinaryTreeSearch();
         BTS.Add(10);
         BTS.Add(11);
         BTS.Add(5);
@@ -84,5 +83,18 @@ describe('Binary Test', () => {
         expect(BTS.root.value).toEqual(10);
         expect(BTS.root.left.value).toEqual(5);
         expect(BTS.root.right.value).toEqual(11);
+    });
+
+    test('Can return the max value in a tree', () => {
+        const BTS = new BinaryTreeSearch();
+        BTS.Add(10);
+        BTS.Add(9);
+        BTS.Add(13);
+        BTS.Add(7);
+        BTS.Add(19);
+        BTS.Add(32);
+        BTS.Add(1);
+        BTS.Add(5);;
+        expect(BTS.Max()).toEqual(32);
     });
 });
