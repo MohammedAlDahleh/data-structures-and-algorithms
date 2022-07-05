@@ -1,7 +1,7 @@
 'use strict';
-const BinaryTree = require('./Binary-Tree/binary-tree');
+
 const Node = require('./node');
-const BinaryTreeSearch = require('./Binary-Search-Tree/Binary-Search-Tree')
+const { BinaryTree, BinaryTreeSearch } = require('./Binary-Tree/binary-tree');
 
 let tree = null;
 
@@ -26,30 +26,34 @@ three.right = five;
 
 tree = new BinaryTree(one);
 
-let preOrder = tree.preOrder();
+let preOrder = tree.PreOrder();
 console.log('pre order: ', preOrder);
 //pre order > 1 , 2 , 6 , 7 , 8 , 9 , 3 , 4 , 5
 
-let inOrder = tree.inOrder();
+let inOrder = tree.InOrder();
 console.log('in order: ', inOrder);
 //pre order > 6 , 8 , 7 , 9 , 2 , 1 , 4 , 3 , 5
 
 
-let postOrder = tree.postOrder();
+let postOrder = tree.PostOrder();
 console.log('post order: ', postOrder);
 //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
 
-
 let BTS = new BinaryTreeSearch();
 
-BTS.Add(10);
-BTS.Add(11);
+BTS.Add(9);
+BTS.Add(13);
+BTS.Add(7);
+BTS.Add(19);
+BTS.Add(32);
+BTS.Add(1);
 BTS.Add(5);
-BTS.Add(13);
-BTS.Add(13);
-BTS.Add(6);
-BTS.Add(15);
 
-console.log(BTS.Contains(6));
-console.log(BTS.Contains(15));
+console.log(BTS.Contains(7));
+console.log(BTS.Contains(13));
 console.log(BTS.Contains(20));
+
+console.log('************************');
+console.log(tree.Max());
+console.log(BTS.Max());
+console.log('************************');
