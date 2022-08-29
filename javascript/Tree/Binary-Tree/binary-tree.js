@@ -114,5 +114,5 @@ class BinaryTreeSearch extends BinaryTree {
     return false;
   }
 }
-
-module.exports = { BinaryTreeSearch, BinaryTree };
+//BinaryTreeSearch,
+module.exports =  BinaryTree ;
