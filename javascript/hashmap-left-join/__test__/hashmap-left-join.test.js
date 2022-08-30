@@ -1,7 +1,7 @@
 'use strict';
 
 const left_join = require('../hashmap-left-join');
-const HashTable = require('../../hashtable/lib/hashmap');
+const HashTable = require('../../hashtable/lib/hashTable');
 describe("Join left hash map", () => {
     it("Returns the left map after joining the right map to it", () => {
       const left = new Map();
