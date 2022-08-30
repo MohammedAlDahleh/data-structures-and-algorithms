@@ -1,4 +1,4 @@
-const HashTable = require('../hashtable/lib/hashmap');
+const HashTable = require('../hashtable/lib/hashTable');
 
 function left_join(leftHashMap, rightHashMap) {
   for(let [key, value] of leftHashMap) {

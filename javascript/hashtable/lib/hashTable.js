@@ -1,6 +1,6 @@
 'use strick'
 const LinkedList = require('./linkedlist');
-class Hashmap {
+class HashTable {
     constructor(size) {
         this.size = size;
         this.map = new Array(size);
@@ -30,7 +30,9 @@ class Hashmap {
             return false;
         }
         return true;
+        
     }
+   
     set(key, value) {
         let index = this.hash(key);
         let bucket = { [key]: value }
@@ -54,8 +56,10 @@ class Hashmap {
     //     const target = this.hash(key);
     //     return this.map[target];
     //   }
+    
 }
 
 
 
-module.exports = Hashmap;
+
+module.exports = HashTable;
